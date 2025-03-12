@@ -1,0 +1,11 @@
+version: '3'
+services:
+  security-drone:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - CAMERA_URL=${CAMERA_URL}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - CHAT_ID=${CHAT_ID}
+      - MONGO_URI=${MONGO_URI}
